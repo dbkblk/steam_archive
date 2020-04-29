@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "git_steam_archive", "archive\git_steam_archive.csproj", "{A6A11ABB-280F-4192-8DCA-3648EB680A9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "git_steam_restore", "restore\git_steam_restore.csproj", "{F124436D-2820-4B2A-BD32-CDAB2F1FA29D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6A11ABB-280F-4192-8DCA-3648EB680A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A11ABB-280F-4192-8DCA-3648EB680A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A11ABB-280F-4192-8DCA-3648EB680A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A11ABB-280F-4192-8DCA-3648EB680A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F124436D-2820-4B2A-BD32-CDAB2F1FA29D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F124436D-2820-4B2A-BD32-CDAB2F1FA29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F124436D-2820-4B2A-BD32-CDAB2F1FA29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F124436D-2820-4B2A-BD32-CDAB2F1FA29D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D285B1C4-09D9-4DB3-901A-0E5F28580D1E}
+	EndGlobalSection
+EndGlobal

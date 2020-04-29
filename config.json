@@ -1,0 +1,9 @@
+{
+    "steamLibs": [
+        "R:\\Steam\\steamapps",
+        "L:\\Jeux\\steamapps",
+        "S:\\Jeux_SteamLib\\steamapps"
+    ],
+    "archivePath": "S:\\Jeux_SteamLib",
+    "removeAfterArchive": true
+}
