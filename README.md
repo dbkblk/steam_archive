@@ -2,6 +2,14 @@
 
  I wanted something decoupled from steam to backup and restore my games, so I wrote a small executable to handle this.
 
+ Main features:  
+
+ - Faster (multithreaded) backup & restore.   
+ - Ability to backup & restore many games at the same time.   
+ - Low priority, so you can actually do something else with your computer (even play another game).   
+ - Ability to backup & restore from / to another computer with network shared library.   
+ - Easy to use and to deploy everywhere.   
+
 ## Requirements
 
 You NEED 7-zip for this to work. Download it here: https://www.7-zip.org/download.html
