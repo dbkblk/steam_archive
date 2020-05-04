@@ -85,7 +85,7 @@ namespace git_steam_archive
             foreach (var game in games)
             {
                 nValue++;
-                Console.WriteLine($"[{nValue}] {game.Name} ({game.TotalSizeString})");
+                Console.WriteLine($"[{nValue}] {game.Name} (id: {game.AppID}, {game.TotalSizeString}) [{game.LibPath}]");
             }
 
             // Attente
