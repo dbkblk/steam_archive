@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace git_steam_archive
+namespace steam_tools
 {
     class Archive
     {
@@ -30,6 +30,13 @@ namespace git_steam_archive
             var games = new List<Game>();
             foreach(var p in content.Where(a => !string.IsNullOrEmpty(a)))
             {
+                // Test du dossier
+                if(!Directory.Exists(p))
+                {
+                    Console.WriteLine($"Cannot reach path: {p}.");
+                    continue;
+                }
+
                 // Enumération des fichiers ACF
                 var acf = Directory.GetFiles(p, "*.acf");
                 foreach(var a in acf)
@@ -85,7 +92,7 @@ namespace git_steam_archive
             foreach (var game in games)
             {
                 nValue++;
-                Console.WriteLine($"[{nValue}] {game.Name} (id: {game.AppID}, {game.TotalSizeString}) [{game.LibPath}]");
+                Console.WriteLine($"[{nValue}] {game.Name} ({game.TotalSizeString}) [{game.LibPath}]");
             }
 
             // Attente

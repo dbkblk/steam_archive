@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace git_steam_archive
+namespace steam_tools
 {
     class Restore
     {

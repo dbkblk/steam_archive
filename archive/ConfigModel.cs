@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace git_steam_archive
+namespace steam_tools
 {
     public class ConfigModel
     {
