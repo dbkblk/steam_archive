@@ -137,15 +137,15 @@ namespace steam_tools
 
                     File.WriteAllLines(Path.Combine("scripts", $"archive_{selectedGame.AppID}.bat"), script);
 
-                    // Lancement en priorité basse
+                    // Lancement
                     var parent = Process.GetCurrentProcess();
-                    parent.PriorityClass = ProcessPriorityClass.Idle;
+                    //parent.PriorityClass = ProcessPriorityClass.Idle;
                     System.Diagnostics.Process process = new System.Diagnostics.Process();
                     System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                     startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     startInfo.FileName = Path.Combine("scripts", $"archive_{selectedGame.AppID}.bat");
                     process.StartInfo = startInfo;
-                    process.Start();            
+                    process.Start();
                 }
             }
             catch

@@ -71,9 +71,9 @@ namespace steam_tools
 
                 File.WriteAllLines(Path.Combine("scripts", "restore.bat"), script);
 
-                // Lancement en priorité basse
+                // Lancement
                 var parent = Process.GetCurrentProcess();
-                parent.PriorityClass = ProcessPriorityClass.Idle;
+                //parent.PriorityClass = ProcessPriorityClass.Idle;
                 System.Diagnostics.Process process = new System.Diagnostics.Process();
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                 startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
