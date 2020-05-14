@@ -11,7 +11,7 @@ namespace steam_tools
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Steam restorer - Select the game to restore:");
+            Console.WriteLine("Steam restorer v1.1 - Select the game to restore:");
 
             // Découverte du dossier d'installation de 7-zip
             string zip = "";
@@ -20,17 +20,6 @@ namespace steam_tools
 
             // Lecture des dossiers Steam
             var content = File.ReadAllLines("steamapps.txt").Where(a => !string.IsNullOrEmpty(a)).ToList();
-
-            bool abort = false;
-            foreach(var dir in content)
-            {
-                if (!Directory.Exists(dir))
-                {
-                    Console.WriteLine($"The path {dir} specified in steamapps.txt, doesn't exist.");
-                    abort = true;
-                }
-            }
-            if (abort) throw new Exception("Please review steamapps.txt paths before to continue.");
 
             // Liste des archives
             var archives = Directory.GetFiles("backups/", "*.7z").OrderBy(a => a).ToList();
@@ -58,7 +47,16 @@ namespace steam_tools
                 foreach(var c in content)
                 {
                     nPath++;
-                    Console.WriteLine($"[{nPath}] {c}");
+                    // Test du dossier
+                    if (!Directory.Exists(c))
+                    {
+                        Console.WriteLine($"Cannot reach path: {c}.");
+                        continue;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[{nPath}] {c}");
+                    }
                 }
                 Console.WriteLine("[Other] Cancel.");
                 var pathValue = Console.ReadLine();

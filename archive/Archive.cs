@@ -11,7 +11,7 @@ namespace steam_tools
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Steam archiver - Select the game to archive: {Environment.NewLine}");
+            Console.WriteLine($"Steam archiver v1.1 - Select the game to archive: {Environment.NewLine}");
 
             // Découverte du dossier d'installation de 7-zip
             string zip = "";
